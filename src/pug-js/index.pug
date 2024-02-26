@@ -23,4 +23,49 @@ html(lang="en")
         link(rel="stylesheet" href="./public/index.css")
 
     body 
+        main(class="main" id="main")
+            section(class="left")
+                p(class="left__title") Work with us
+                
+                p(class="left__desc")
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    | Morbi lobortis maximus nunc, ac rhoncus odio congue quis.
+                    | Sed ac semper orci, eu porttitor lacus.
+
+            section(class="right")
+                span(class="right__sign-up")
+                    | Don't have have an account?
+                    a(href="#") Sign up
+
+                div(class="right__social")
+                    span(class="right__social__title") Welcome back!
+
+                    a(href="right__social__google") Continue with Google
+                    a(href="right__social__twitter") Continue with Twitter
+
+                div(class="right__or")
+                    span(class="right__or__text") or
+
+                form(class="right__form")
+                    div(class="right__form__email")
+                        div(class="right__form__header")
+                            label(for="email") Enter your email address
+                        input#email-address(type="email" name="email")
+
+                    div(class="right__form__password")
+                        div(class="right__form__header")
+                            label(for="password") Enter your password
+                            span(class="hide") hide
+                        input#password(type="password" name="password")
+
+                    div(class="right__form__footer")
+                        a(href="" class="right__form__forget-left") Forget your password
+
+                        div(class="right__form__footer-right")
+                            input#sign-in(type="submit" value="sign-in")
+
+                            a(href="#")
+                                | Don’t have an account?
+                                span(class="sign-up") Sign up
+
         +no-script()
