@@ -34,38 +34,44 @@ html(lang="en")
 
             section(class="right")
                 span(class="right__sign-up")
-                    | Don't have have an account?
+                    | Don't have have an account? 
                     a(href="#") Sign up
 
-                div(class="right__social")
-                    span(class="right__social__title") Welcome back!
+                div(class="right__content")
+                    div(class="right__content__social")
+                        span(class="right__content__social__title") Welcome back!
 
-                    a(href="right__social__google") Continue with Google
-                    a(href="right__social__twitter") Continue with Twitter
+                        div(class="right__content__social__btn-group")
+                            a(href="#" class="btn br right__content__social__google")
+                                +google()
+                                | Continue with Google
+                            a(href="#" class="btn br right__content__social__twitter")
+                                +twitter()
+                                | Continue with Twitter
 
-                div(class="right__or")
-                    span(class="right__or__text") or
+                    div(class="right__content__or")
+                        span(class="right__content__or__text") or
 
-                form(class="right__form")
-                    div(class="right__form__email")
-                        div(class="right__form__header")
-                            label(for="email") Enter your email address
-                        input#email-address(type="email" name="email")
+                    form(class="right__content__form")
+                        div(class="right__content__form__email")
+                            div(class="right__content__form__header")
+                                label(for="email") Enter your email address
+                            input#email-address(type="email" name="email")
 
-                    div(class="right__form__password")
-                        div(class="right__form__header")
-                            label(for="password") Enter your password
-                            span(class="hide") hide
-                        input#password(type="password" name="password")
+                        div(class="right__content__form__password")
+                            div(class="right__content__form__header")
+                                label(for="password") Enter your password
+                                span(class="hide") hide
+                            input#password(type="password" name="password")
 
-                    div(class="right__form__footer")
-                        a(href="" class="right__form__forget-left") Forget your password
+                        div(class="right__content__form__footer")
+                            a(href="#" class="right__content__form__forget-left") Forget your password
 
-                        div(class="right__form__footer-right")
-                            input#sign-in(type="submit" value="sign-in")
+                            div(class="right__content__form__footer-right")
+                                input#sign-in(type="submit" value="sign-in")
 
-                            a(href="#")
-                                | Don’t have an account?
-                                span(class="sign-up") Sign up
+                                a(href="#")
+                                    | Don’t have an account?
+                                    span(class="sign-up") Sign up
 
         +no-script()

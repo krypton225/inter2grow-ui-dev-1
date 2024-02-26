@@ -1,0 +1,15 @@
+.main {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    @media (max-width: 991px) {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding-block: 2rem;
+        padding-inline: 0;
+    }
+}
