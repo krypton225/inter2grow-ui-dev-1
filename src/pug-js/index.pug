@@ -24,9 +24,9 @@ html(lang="en")
 
     body 
         main(class="main" id="main")
-            section(class="left")
+            section(class="left no-in-padding")
                 p(class="left__title") Work with us
-                
+
                 p(class="left__desc")
                     | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     | Morbi lobortis maximus nunc, ac rhoncus odio congue quis.
@@ -52,26 +52,29 @@ html(lang="en")
                     div(class="right__content__or")
                         span(class="right__content__or__text") or
 
-                    form(class="right__content__form")
+                    form(class="right__content__form" autocomplete="off")
                         div(class="right__content__form__email")
                             div(class="right__content__form__header")
-                                label(for="email") Enter your email address
-                            input#email-address(type="email" name="email")
+                                label(for="email-address") Enter your email address
+                            input(type="email" name="email" class="custom-input" id="email-address")
 
                         div(class="right__content__form__password")
                             div(class="right__content__form__header")
                                 label(for="password") Enter your password
-                                span(class="hide") hide
-                            input#password(type="password" name="password")
+                                div(class="hide")
+                                    span
+                                        +eye()
+                                    | hide
+                            input(type="password" name="password" class="custom-input" id="password")
 
                         div(class="right__content__form__footer")
-                            a(href="#" class="right__content__form__forget-left") Forget your password
+                            a(href="#" class="right__content__form__footer-left") Forget your password
 
                             div(class="right__content__form__footer-right")
-                                input#sign-in(type="submit" value="sign-in")
+                                input(type="submit" value="Sign-in" class="btn bg-primary" id="sign-in")
 
-                                a(href="#")
-                                    | Don’t have an account?
-                                    span(class="sign-up") Sign up
+                                span(class="sign-up")
+                                    | Don’t have an account? 
+                                    a(href="#" class="sign-up") Sign up
 
         +no-script()

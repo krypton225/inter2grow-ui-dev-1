@@ -1,0 +1,16 @@
+.custom-input {
+    width: 100%;
+    padding-block: 0.75rem;
+    padding-inline-start: 1rem;
+    border: 1px solid var(--label-color);
+    border-radius: 0.75rem;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+label {
+    margin-bottom: 0.5rem;
+    color: var(--label-color);
+}

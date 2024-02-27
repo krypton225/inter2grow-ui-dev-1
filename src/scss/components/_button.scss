@@ -6,9 +6,12 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
 
-    @media (max-width: 576px) {
-        min-height: 2.5rem;
+    @media (max-width: 991px) {
+        min-height: 2.7rem;
+        font-size: 0.85rem;
     }
 
     &.br {

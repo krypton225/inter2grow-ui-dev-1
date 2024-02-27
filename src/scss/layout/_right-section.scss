@@ -1,12 +1,21 @@
 .right {
     width: 100%;
-    padding-inline-end: 5rem !important;
+    padding-inline-end: 5rem;
     position: relative;
+
+    @media (max-width: 991px) {
+        padding-inline: 0.85rem;
+    }
 
     &__sign-up {
         display: block;
         text-align: right;
         font-size: 1rem;
+
+        @media (max-width: 991px) {
+            text-align: center;
+            font-size: 0.85rem;
+        }
 
         a {
             text-decoration: underline;
@@ -21,16 +30,37 @@
         flex-direction: column;
         gap: 1rem;
 
+        @media (max-width: 991px) {
+            padding-inline-end: 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 576px) {
+            margin-top: 2rem;
+        }
+
+        @media (max-height: 800px) {
+            margin-top: 5rem;
+        }
+
         &__social {
             display: flex;
             flex-direction: column;
             gap: 1rem;
+
+            @media (max-width: 991px) {
+                text-align: center;
+            }
 
             &__title {
                 font-size: 2rem;
                 font-weight: 500;
                 line-height: 3rem;
                 color: var(--dark-black-1);
+
+                @media (max-width: 991px) {
+                    font-size: 1.35rem;
+                }
             }
 
             &__btn-group {
@@ -38,15 +68,33 @@
                 flex-direction: column;
                 gap: 0.7rem;
 
+                @media (min-width: 577px) and (max-width: 991px) {
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+                @media (max-width: 576px) {
+                    flex-direction: column;
+                }
+
                 svg {
-                    width: 24px;
-                    height: 24px;
+                    $size: 24px;
+
+                    width: $size;
+                    height: $size;
+
+                    @media (max-width: 576px) {
+                        $size: 20px;
+
+                        width: $size;
+                        height: $size;
+                    }
                 }
 
                 a {
+                    padding-inline: 1.5rem;
                     display: inline-flex;
                     gap: 0.7rem;
-                    font-size: 1.375rem;
                     color: var(--dark-black-1);
                 }
             }
@@ -60,6 +108,11 @@
             font-size: 1.125rem;
             user-select: none;
             color: var(--label-color);
+
+            @media (max-width: 576px) {
+                margin-top: 1rem;
+                font-size: 0.85rem;
+            }
 
             &::before,
             &::after {
@@ -78,6 +131,77 @@
 
             &::after {
                 right: 0;
+            }
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            @media (max-width: 576px) {
+                gap: 1rem;
+            }
+
+            &__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .hide {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    cursor: pointer;
+
+                    span {
+                        $size: 1.5rem;
+
+                        width: $size;
+                        height: $size;
+
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            &__footer {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                &-left {
+                    color: var(--dark-black-2);
+                    text-align: right;
+                    text-decoration: underline;
+                }
+
+                &-right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+                    text-align: left;
+
+                    .btn {
+                        width: 15rem;
+
+                        @media (max-width: 576px) {
+                            width: 10rem;
+                        }
+                    }
+
+                    .sign-up {
+                        color: var(--dark-black-2);
+
+                        a {
+                            color: var(--dark-black-2);
+                            text-decoration: underline;
+                        }
+                    }
+                }
             }
         }
     }

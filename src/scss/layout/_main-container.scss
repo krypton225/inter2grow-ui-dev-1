@@ -10,6 +10,9 @@
 
     section {
         padding-block: 2rem;
-        padding-inline: 0;
+
+        &.no-in-padding {
+            padding-inline: 0;
+        }
     }
 }
