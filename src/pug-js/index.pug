@@ -32,32 +32,43 @@ html(lang="en")
                     | Morbi lobortis maximus nunc, ac rhoncus odio congue quis.
                     | Sed ac semper orci, eu porttitor lacus.
 
+            +space()
             section(class="right")
+                +space()
                 span(class="right__sign-up")
                     | Don't have have an account? 
                     a(href="#") Sign up
 
                 div(class="right__content")
                     div(class="right__content__social")
+                        +space()
                         span(class="right__content__social__title") Welcome back!
 
+                        +space()
                         div(class="right__content__social__btn-group")
+                            +space()
                             a(href="#" class="btn br right__content__social__google")
                                 +google()
                                 | Continue with Google
+                            
+                            +space()
                             a(href="#" class="btn br right__content__social__twitter")
                                 +twitter()
                                 | Continue with Twitter
 
+                    +space()
                     div(class="right__content__or")
+                        +space()
                         span(class="right__content__or__text") or
 
+                    +space()
                     form(class="right__content__form" autocomplete="off")
                         div(class="right__content__form__email")
                             div(class="right__content__form__header")
                                 label(for="email-address") Enter your email address
                             input(type="email" name="email" class="custom-input" id="email-address")
 
+                        +space()
                         div(class="right__content__form__password")
                             div(class="right__content__form__header")
                                 label(for="password") Enter your password
@@ -67,12 +78,14 @@ html(lang="en")
                                     | hide
                             input(type="password" name="password" class="custom-input" id="password")
 
+                        +space()
                         div(class="right__content__form__footer")
                             a(href="#" class="right__content__form__footer-left") Forget your password
 
                             div(class="right__content__form__footer-right")
                                 input(type="submit" value="Sign-in" class="btn bg-primary" id="sign-in")
 
+                                +space()
                                 span(class="sign-up")
                                     | Don’t have an account? 
                                     a(href="#" class="sign-up") Sign up
